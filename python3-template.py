@@ -23,7 +23,6 @@ if __name__ == "__main__":
     formatter = logging.Formatter("%(name)-10s %(levelname)-8s %(message)s")
     console.setFormatter(formatter)
     logging.getLogger("").addHandler(console)
-    (options,args) = parser.parse_args()
     logging.info("logging configuration done")
 
     # pass command line configuration to main program

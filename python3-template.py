@@ -17,7 +17,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging_level,\
                   filename="../run.log",\
                   format="%(asctime)s %(name)-10s %(levelname)-8s %(message)s",
-                  mode="w")
+                  filemode="w")
     console = logging.StreamHandler()
     console.setLevel(logging.INFO)
     formatter = logging.Formatter("%(name)-10s %(levelname)-8s %(message)s")

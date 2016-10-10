@@ -5,7 +5,11 @@ import logging
 if __name__ == "__main__":
     # accept input parameters
     parser = argparse.ArgumentParser()
-    parser.add_argument("-f","--listfile",help="a text FILE containing absolute paths of input files")
+    # a positional argument
+    parser.add_argument("testdir",metavar="TESTDIR",type=str,nargs=1,help="A directory containing testing files")
+    # an optional argument
+    parser.add_argument("--listfile",help="a text FILE containing absolute paths of input files")
+    # an optional argument with a shortcut
     parser.add_argument("-v","--verbose",help="increase output verbosity",action="store_true",dest="verbose",default=False)
     args = parser.parse_args()
     if args.verbose:
